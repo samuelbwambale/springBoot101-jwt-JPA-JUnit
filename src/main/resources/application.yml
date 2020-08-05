@@ -1,0 +1,23 @@
+server:
+  port: 8081
+jwt:
+  secret: my-secret
+spring:
+  application:
+    name: spring101-app
+  datasource:
+    url: jdbc:mysql://localhost/springBoot101?serverTimezone=UTC
+    username: root
+    password: password
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+#      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
